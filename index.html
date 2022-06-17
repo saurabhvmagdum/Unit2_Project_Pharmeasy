@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>
+    <div id="navbar">
+        <div id="navbar_upper">
+            <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+            <div id="search-bar">
+                <button id="pincode">Select Pincode</button>
+                <input type="text" name="search" id="search" placeholder="Search medicines / Healthcare products">
+                <img src="https://i.pinimg.com/736x/fa/0e/7b/fa0e7b992eff03c576727e95c746005c.jpg" id="search-image" alt="">
+            </div>
+            
+        </div>
+        <div id="navbar_lower">
+            <div id="firstdiv">
+                <h3 onclick="gotoOrder()">Order Medicines</h3>
+                <h3>Healthcare Products</h3>
+                <h3>Lab Tests </h3>
+                <h3>RTPCR</h3>
+            </div>
+            <div id="lastdiv">
+               <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><h3> Offers</h3></div>
+               <div onclick="gotoSignup()"><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""> <h3 id="changeLogin">Login/Signup</h3></div>
+               <div onclick="gotocart()"><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt=""><h3> Cart</h3></div>
+            </div>
+        </div>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides1">
+        <img src="https://cms-contents.pharmeasy.in/banner/0a08bc09b92-MEGA20_Dweb.jpg?dim=1440x0&dpr=1&q=100" >
+        </div>
+    
+        <div class="mySlides1">
+        <img src="https://cms-contents.pharmeasy.in/banner/5aeebb1a134-Dweb2.jpg?dim=1440x0&dpr=1&q=100">
+        </div>
+    
+        <div class="mySlides1">
+        <img src="https://cms-contents.pharmeasy.in/banner/b287e359a6f-Dweb.jpg?dim=1440x0&dpr=1&q=100">
+        </div>
+    
+        <div class="mySlides1">
+            <img src="https://cms-contents.pharmeasy.in/banner/b287e359a6f-Dweb.jpg?dim=1440x0&dpr=1&q=100">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+    </div>
+    <div id="mid-container">
+        <div id="orderid">
+            <div class="upperbox">
+                <div>
+                    <div class="topimage">
+                        <p>Flat 15% off</p>
+                    </div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/7c645a8d.png?dim=186x0&dpr=1&q=100" alt="">
+                </div>
+                <h2>Order Medicines</h2>
+            </div>
+            <div class="lowerbox">
+                <button style="background-color:rgb(34, 139, 99);"><strong>Order Now</strong></button>
+            </div>
+        </div>
+        <div id="orderid">
+            <div class="upperbox">
+                <div>
+                    <div class="topimage">
+                        <p>Upto 60% off</p>
+                    </div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/c7c7095b.png?dim=186x0&dpr=1&q=100" alt="">
+                </div>
+                <h2>Healthcare Products</h2>
+            </div>
+            <div class="lowerbox">
+                <button style="background-color:orange;"><strong>Order Now</strong></button>
+            </div>
+        </div>
+        <div id="orderid">
+            <div class="upperbox">
+                <div>
+                    <div class="topimage">
+                        <p>Upto 70% off</p>
+                    </div>
+                    <img src="https://assets.pharmeasy.in/web-assets/dist/e1d3ac1c.png?dim=186x0&dpr=1&q=100" alt="">
+                </div>
+                <h2>Lab Tests</h2>
+            </div>
+            <div class="lowerbox">
+                <button style="background-color: rgb(0, 195, 255);"><strong>Book Now</strong></button>
+            </div>
+        </div>
+    </div>
+    <div id="pharmeasy">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/e3db129c.png" alt="" style="width: 200px; height: 50px;" >
+        <div>
+            <p>Save Flat 5% extra on medicines & enjoy free delivery With PLUS membership</p>
+        </div>
+        <img src="https://assets.pharmeasy.in/web-assets/dist/b20b0932.png" alt="">
+    </div>
+    <div id="offerdiv">
+        <div id="offerdiv_1">
+            <img src="https://assets.pharmeasy.in/web-assets/dist/67890676.svg" alt="">
+            <h2>Offers just for you</h2>
+        </div>
+        <div id="offercontainer">
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/99a287decc6-FLAT_30OFF.jpg?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Flat 30% off</p>
+                    <p>Code : <strong>GRAND30</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/81308cc59b5-FLAT_20.jpg?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Flat 20% off</p>
+                    <p>Code : <strong>MEGA30</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/2846076d5d2-Diagnostics-10-min.png?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Flat RS.400 off</p>
+                    <p>Code : <strong>TEST4U</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/bb20b7c6548-2.jpg?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Flat 23% off</p>
+                    <p>Code : <strong>PABUS23</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/dceebedd00f-Diagnostics-09-min.png?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Get Flat RS.400 off</p>
+                    <p>Code : <strong>CSH600</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/a39f3a0b277-Diagnostics-01-min.png?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Get Flat RS.200 off</p>
+                    <p>Code : <strong>CSHB200</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/f99f81a36bd-1X1_Log_PE.png?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Get Free Checkup</p>
+                    <p>Code : <strong>GRAND30</strong></p>
+                </div>
+            </div>
+            <div>
+                <img src="https://cms-contents.pharmeasy.in/offer/999a966ce68-Diagnostics-11-min.png?dim=60x0&dpr=1&q=100" alt="">
+                <div>
+                    <p>Get Flat RS.1200 off</p>
+                    <p>Code : <strong>GRAND1200</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="booktest">
+        <div id="firsttestbox">
+            <h3>Frequently Booked Lab Tests</h3>
+            <p>100+ Certified Labs</p>
+            <p>10000 Happy Customers</p>
+            <p>Free Sample Collection</p>
+            <p>Accurate Reports</p>
+        </div>
+        <div id="secondtestbox">
+            <div></div>
+        </div>
+    </div>
+    
+    <div id="featuredbox">
+        <h2>Featured Brands</h2>
+        <div>
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/93dac6224e1-web.jpg?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/fd17e547883-Horlicks_web.jpg?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/f7a36c06aed-web_Dettol.jpg?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/c572570b5ce-Liveasy.jpg?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/c72feb4bd7a-web_Huggies.jpg?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/fee433dea2d-web.jpg?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/2d987111a15-Featured-banner_Revital.png?dim=146x0&dpr=1&q=100" alt="">
+            <img src="https://cms-contents.pharmeasy.in/carousel_item/ac01791d842-Featured-banner_Volini.png?dim=146x0&dpr=1&q=100" alt="">
+        </div>
+    </div>
+</body>
+</html>
+<script src="indexpage.js"></script>
