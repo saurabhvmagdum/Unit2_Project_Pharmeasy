@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    #navbar{
+        height: 100px;
+        width: 100%;
+        background-color: #10847e;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #navbar > img{
+        height: 60px;
+        margin-top: 20px;
+    }
+    form{
+        justify-content: center;
+        width: 30%;
+        height: 400px;
+        margin: auto;
+    }
+    form > input{
+        width: 80%;
+        height: 40px;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    form > button{
+        width: 80%;
+        height: 40px;
+        background-color: #10847e;
+        font-size: 20px;
+        color: white;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div id="navbar">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+        <img src="https://assets.pharmeasy.in/web-assets/dist/1fe1322a.svg" alt="">
+    </div>
+    <form id="form" action="">
+        <h1>Quick Register</h1>
+        <input type="number" id="number" placeholder="Enter your phone number">
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button type="submit">Continue</button>
+        <p>By clicking continue, you agree with our Privacy Policy</p>
+    </form> 
+</body>
+</html>
+<script>
+    var sign = document.querySelector("#form").addEventListener("submit", myFunction)
+    var signup = JSON.parse(localStorage.getItem("customerData"));
+    var signupData=[];
+    function myFunction() {
+        event.preventDefault();
+
+        var firstobj = {
+            name: form.name.value,
+            phoneNo: form.number.value,
+            pwd: form.password.value,
+        }
+        signupData.push(firstobj);
+        if (signup != null && signup.phoneNo === firstobj.phoneNo) {
+            alert("Already exists");
+            return
+        }
+        localStorage.setItem("customerData", JSON.stringify(signupData))
+        alert("Account Created Successfully")
+
+        //write the home page location after login it will go
+        window.location.href = "login.html"
+    }
+</script>
