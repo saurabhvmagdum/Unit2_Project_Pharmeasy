@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+#navbar{ 
+    position:fixed;
+    width: 100%;
+    height: 100px;
+    background-color: #10847e;
+    display: flex;
+}
+#logo{
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#firstdiv{
+    display: flex;
+    width: 40%;
+    height: 30px;
+    margin-left: 3%;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    color: white;
+}
+#firstdiv > h3:hover{
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+#lastdiv{
+    display: flex;
+    width: 30%;
+    margin-left: 14%;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    color: white;
+}
+#lastdiv > div:hover{
+    cursor: pointer;
+}
+#lastdiv > div>img{
+    height: 25px;
+    width: 25px;
+}
+#lastdiv > div{
+    display: flex;
+}
+#main-container{
+    display: flex;
+    color: black;
+    width: 80%;
+    height: 320px;
+    margin: auto;
+    padding-top: 140px;
+}
+#search-div{
+    height: 200px;
+    background-color: #10847e;
+    width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+}
+#search-image{
+    padding-left: 10px;
+    border-radius: 5px;
+}
+#search-bar > input{
+    height: 50px;
+    width: 400px;
+    border: none;
+    /* border-radius: 10px; */
+    padding-left: 20px;
+    font-size: 15px;
+    color: #4f585e;
+}
+#search-bar{
+    display: flex;
+    width: 90%;
+    height: 50px;
+    margin-left: 30px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+#pincode{
+    width: 150px;
+    border-radius: 10px;
+    color: #10847e;
+    font-size: 15px;
+    border: none
+}
+#div-search ,#searchtitle{
+    display: flex;
+    color: white;
+    margin-left: 30px;
+    
+}
+#div-search > div , #searchtitle{
+    display: flex;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.div2{
+    width: 40%;
+    height: 300px;
+    margin-top: 60px;
+    margin-left: 80px;
+    display: flex;
+}
+.div2 > h1{
+    width: 40%;
+    color: rgb(175, 170, 170);
+}
+.div2 >img{
+    height: 150px;
+    margin-top: 50px;
+}
+#row{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    grid-template-rows: repeat(auto);
+    gap: 30px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#row > div > img{
+    width: 200px;
+    height: 300px;
+}
+#row > div > button{
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border: none;
+    background-color: #10847e;
+    color: white;
+    font-size: 15px;
+}
+#amount{
+    display: flex;
+    justify-content: space-evenly;
+}
+#amount > button{
+    /* margin-left: 40%; */
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    background-color: #10847e;
+    color: white;
+    font-size: 30px;
+    margin-top: 50px;
+}
+#cuppon > button{
+    margin-left: 35%;
+    height: 50px;
+    width: 400px;
+    text-align: center;
+    border: none;
+    background-color: #10847e;
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+}
+</style>
+<body>
+    <div id="navbar">
+        <img id="logo" src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+        <div id="firstdiv">
+            <h3 onclick="gotoOrder()">Order Medicines</h3>
+            <h3>Healthcare Products</h3>
+            <h3>Lab Tests </h3>
+        </div>
+        <div id="lastdiv">
+            <div><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt=""><h3> Offers</h3></div>
+            <div onclick="gotoSignup()"><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt=""> <h3 id="changeLogin">Login/Signup</h3></div>
+            <div onclick="gotocart()"><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt=""><h3> Cart</h3></div>
+        </div>
+    </div>
+    <div id="main-container">
+       <div>
+            <h1>Cart</h1>
+            <div id="search-div">
+                <div id="div-search">
+                    <div><img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FvaluePropDisc.svg&w=16&q=75" alt=""><p> Flat 15% off</p></div>
+                    <div><img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FvaluePropProd.svg&w=16&q=75" alt=""><p> 1 Lakh+ Products</p></div>
+                    <div><img src="https://pharmeasy.in/_next/image?url=%2Ficons%2FvaluePropReturn.svg&w=16&q=75" alt=""><p> Easy Products</p></div>
+                </div>
+                <h3 id="searchtitle">Search for Medicines / Healthcare Products</h3>
+                <div id="search-bar">
+                    <button id="pincode">Select Pincode</button>
+                    <input type="text" name="search" id="search" placeholder="Search medicines / Healthcare products">
+                    <img src="https://i.pinimg.com/736x/fa/0e/7b/fa0e7b992eff03c576727e95c746005c.jpg" id="search-image" alt="">
+                </div>  
+            </div>
+       </div>
+       <div class="div2">
+       </div>
+    </div>
+    <div id="row"></div>
+    <div id="amount"></div>
+    <div id="cuppon" style="font-size: 20px;"></div>
+</body>
+</html>
+<script>
+function gotoOrder(){
+    window.location.href="order_medicines.html";
+}
+function gotocart(){
+    window.location.href="cart.html";
+}
+function gotoSignup(){
+    window.location.href="signup.html"
+}
+cartarray=JSON.parse(localStorage.getItem("productBag"))
+if(cartarray.length == 0)
+{
+    let nameEmpty = document.createElement("h1");
+    nameEmpty.innerText = "Your cart is Empty";
+
+    let imageEmpty = document.createElement("img");
+    imageEmpty.setAttribute("src","https://assets.pharmeasy.in/web-assets/dist/bb14593e.svg");
+
+    document.querySelector(".div2").append(nameEmpty,imageEmpty);
+}
+else{
+    cartarray.forEach(function(el,index){
+    box=document.createElement("div")
+
+    image=document.createElement("img")
+    image.src = el.image;
+    
+    h3=document.createElement("h3")
+    h3.innerText=el.name
+
+    p=document.createElement("p")
+    p.innerText=el.branchName;
+
+    h4=document.createElement("h4")
+    h4.innerText="RS."+el.price
+    button=document.createElement("button")
+    button.innerText="remove from cart"
+    // button.style.color="red"
+    // button.style.backgroundColor = "black";
+
+    button.addEventListener("click",function(){
+        deleteFunction(el,index)
+    })
+
+    box.append(image,h3,p,h4,button)
+
+    document.querySelector("#row").append(box)
+})
+}
+function deleteFunction(el,index){
+    cartarray.splice(index,1)
+    localStorage.setItem("productBag",JSON.stringify(cartarray))
+    location.reload();
+}
+// sum of aomount----------------------------------------------------------------
+var sum=0;
+cartarray.forEach(function(el){
+   sum+=el.price
+})
+console.log(sum)
+localStorage.setItem("amount",sum)
+sum1=localStorage.getItem("amount")
+
+button12=document.createElement("button")
+button12.innerText="Amount"+"="+"RS."+sum1;
+document.querySelector("#amount").append(button12)
+
+
+button13=document.createElement("button")
+button13.innerText="Make payment";
+// button13.style.color="black"
+button13.style.backgroundColor = "teal";
+
+button14=document.createElement("button")
+button14.innerText="Use code : GRAND30 and get discount"
+document.querySelector("#cuppon").append(button14)
+button14.addEventListener("click",function(){
+ discount(sum)
+})
+
+button13.addEventListener("click",function(){
+   
+// add payment page here using location.href="page name"
+location.href="payment.html"
+
+})
+document.querySelector("#amount").append(button13)
+
+
+document.querySelector("#bag").innerText=cartarray.length;
+
+l=cartarray.length;
+localStorage.setItem("number",l)
+
+function discount(sum){
+ amnt=sum*30
+ final=amnt/100
+ sum=sum-final
+ console.log(sum)
+ localStorage.setItem("amount",sum)
+ button12.innerText="Amount"+"="+"RS."+sum;
+}
+
+</script>
